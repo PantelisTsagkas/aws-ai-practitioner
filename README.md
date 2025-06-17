@@ -2,7 +2,7 @@
 
 ## 📊 Exam Overview
 - **Format**: 50 scored questions + 15 unscored
-- **Duration**: Not specified in guide
+- **Duration**: 130 minutes
 - **Passing Score**: 700/1000
 - **Question Types**: Multiple choice, Multiple response, Ordering, Matching, Case study
 
