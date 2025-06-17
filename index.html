@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From ISTQB Failure to AWS Certified AI Practitioner — My 14-Day AI Sprint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6b46c1 0%, #3182ce 100%);
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 23px;
+            top: 32px;
+            height: calc(100% - 32px);
+            width: 2px;
+            background-color: #e5e7eb;
+        }
+        
+        .prose a {
+            color: #4f46e5;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        
+        .prose a:hover {
+            color: #4338ca;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="gradient-bg text-white">
+            <div class="container mx-auto px-4 py-16 md:py-24">
+                <div class="max-w-4xl mx-auto text-center">
+                    <span class="inline-block px-3 py-1 text-xs font-semibold bg-white text-indigo-600 rounded-full mb-4">CERTIFICATION JOURNEY</span>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">🧠 From ISTQB Failure to AWS Certified AI Practitioner</h1>
+                    <p class="text-xl md:text-2xl text-indigo-100 mb-8">My 14-Day AI Sprint</p>
+                    <div class="flex justify-center space-x-4">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 bg-opacity-20">
+                            <i class="fas fa-clock mr-1"></i> 5 min read
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 bg-opacity-20">
+                            <i class="fas fa-calendar-alt mr-1"></i> June 2023
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Author Info -->
+        <div class="container mx-auto px-4 -mt-10">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+                <div class="md:flex">
+                    <div class="md:shrink-0 p-4">
+                        <img class="h-16 w-16 rounded-full object-cover border-2 border-white shadow" src="https://unsplash.com/illustrations/a-black-and-white-image-of-a-man-with-a-beard-BAzCL3madJo?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash" alt="Author">
+                    </div>
+                    <div class="p-6 md:p-4">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Author</div>
+                        <p class="mt-1 text-gray-900 font-medium">Pantelis Tsagkas</p>
+                        <p class="mt-1 text-gray-500">Apprentice Test Engineer | AWS Certified AI Practitioner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-12 max-w-4xl prose prose-indigo prose-lg">
+            <div class="mb-12">
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    A personal roadmap to passing the AWS Certified AI Practitioner (AIF-C01) exam with minimal fluff, maximum focus, and practical tools.
+                </p>
+            </div>
+
+            <!-- Background Section -->
+            <section class="mb-16">
+                <div class="flex items-center mb-6">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                        <i class="fas fa-hard-hat text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">🚧 Background</h2>
+                </div>
+                <p class="text-gray-600 mb-6">
+                    Earlier this year, I failed the ISTQB Foundation Level exam — a tough blow, but also the start of a turning point.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    Instead of giving up, I decided to pivot toward what excites me most: Artificial Intelligence and the cloud. My goal?
+                </p>
+                <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 mb-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-check-circle text-indigo-500"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-sm text-indigo-700">
+                                <span class="font-bold">✅ Pass the AWS Certified AI Practitioner exam</span><br>
+                                ✅ Build something real with AWS AI services<br>
+                                ✅ Understand how to apply LLMs, generative AI, and machine learning workflows in production
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline Section -->
+            <section class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                        <i class="fas fa-calendar-alt text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">📆 Timeline: 14-Day Study Plan</h2>
+                </div>
+                <p class="text-gray-600 mb-8">
+                    I gave myself two weeks and followed a focused, structured routine:
+                </p>
+
+                <!-- Week 1 -->
+                <div class="relative mb-12">
+                    <h3 class="text-2xl font-bold mb-6 bg-indigo-100 px-4 py-2 rounded-lg inline-block">📅 Week 1: Understand the Concepts</h3>
+                    <p class="text-gray-600 mb-6 font-medium">Goal: Lay the foundation</p>
+                    
+                    <div class="space-y-8">
+                        <!-- Day 1-2 -->
+                        <div class="relative timeline-item pl-12">
+                            <div class="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600">
+                                <span class="font-bold">1-2</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-600"><span class="font-bold">Day 1–2:</span> Skim the AWS Certified AI Practitioner Exam Guide</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Day 3-5 -->
+                        <div class="relative timeline-item pl-12">
+                            <div class="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600">
+                                <span class="font-bold">3-5</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-600"><span class="font-bold">Day 3–5:</span> Watched the entire Pluralsight AI Practitioner Path</p>
+                                <div class="mt-2 pl-4 border-l-2 border-gray-200">
+                                    <p class="text-sm text-gray-500">Key modules:</p>
+                                    <ul class="list-disc list-inside text-sm text-gray-600">
+                                        <li>Machine learning lifecycle</li>
+                                        <li>Bedrock vs SageMaker</li>
+                                        <li>Bias/fairness</li>
+                                        <li>Training vs inference</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Day 6 -->
+                        <div class="relative timeline-item pl-12">
+                            <div class="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600">
+                                <span class="font-bold">6</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-600"><span class="font-bold">Day 6:</span> Summarized the 5 AWS domains in Notion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="relative">
+                    <h3 class="text-2xl font-bold mb-6 bg-indigo-100 px-4 py-2 rounded-lg inline-block">📅 Week 2: Practice & Polish</h3>
+                    <p class="text-gray-600 mb-6 font-medium">Goal: Lock in the knowledge with real exam-style challenges</p>
+                    
+                    <div class="space-y-8">
+                        <!-- Day 7-9 -->
+                        <div class="relative timeline-item pl-12">
+                            <div class="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600">
+                                <span class="font-bold">7-9</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-600"><span class="font-bold">Day 7–9:</span> Took 3 practice tests from this Udemy course with 260 questions</p>
+                                <p class="text-sm text-gray-500 mt-2">Repeated weak topics (e.g. bias mitigation, inference pipeline, Bedrock model selection)</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Day 10-11 -->
+                        <div class="relative timeline-item pl-12">
+                            <div class="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600">
+                                <span class="font-bold">10-11</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-600"><span class="font-bold">Day 10–11:</span> Used @ChatGPT to simulate exam flashcards, correct misconceptions</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Day 12 -->
+                        <div class="relative timeline-item pl-12">
+                            <div class="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600">
+                                <span class="font-bold">12</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-600"><span class="font-bold">Day 12:</span> Focused on understanding responsible AI, XAI, and model governance</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Day 13 -->
+                        <div class="relative timeline-item pl-12">
+                            <div class="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600">
+                                <span class="font-bold">13</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-600"><span class="font-bold">Day 13:</span> Full-length mock + review mistakes</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Day 14 -->
+                        <div class="relative timeline-item pl-12">
+                            <div class="absolute left-0 flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600">
+                                <span class="font-bold">14</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                <p class="text-gray-600"><span class="font-bold">Day 14:</span> Rest, review notes, exam passed ✅</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What I Learned Section -->
+            <section class="mb-16">
+                <div class="flex items-center mb-6">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                        <i class="fas fa-lightbulb text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">💡 What I Learned</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-lg mb-3 flex items-center">
+                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 mr-2 text-sm">1</span>
+                            🎯 Key Topics That Appeared:
+                        </h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Bedrock vs SageMaker (strengths, differences, use cases)</li>
+                            <li>Training vs inference vs tuning</li>
+                            <li>Bias/fairness and explainability techniques</li>
+                            <li>Foundation models and generative AI services</li>
+                            <li>Responsible AI in enterprise settings</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-lg mb-3 flex items-center">
+                            <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 mr-2 text-sm">2</span>
+                            🔁 Practice Beats Memorization
+                        </h3>
+                        <p class="text-gray-600">
+                            Doing exam-level practice questions was a game-changer. The Udemy set had realistic questions and helped me spot AWS's tricky phrasing.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bonus Project Section -->
+            <section class="mb-16">
+                <div class="flex items-center mb-6">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                        <i class="fas fa-gift text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">🧠 Bonus: Building a Certified AWS AI App</h2>
+                </div>
+                <p class="text-gray-600 mb-6">
+                    Immediately after passing, I started building a real project using what I learned:
+                </p>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                    <div class="md:flex">
+                        <div class="md:shrink-0 p-6 flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-50">
+                            <div class="floating">
+                                <i class="fas fa-robot text-6xl text-indigo-500"></i>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Project</div>
+                            <h3 class="text-2xl font-bold mt-1 mb-4">AskBetter – Prompt Enhancer App</h3>
+                            <p class="text-gray-600 mb-4">
+                                A web app that:
+                            </p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                                <li>Accepts user prompts</li>
+                                <li>Sends them to Amazon Bedrock (Claude 3)</li>
+                                <li>Returns optimized, improved prompt variations</li>
+                            </ul>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-bold text-gray-800 mb-2">🧱 Stack:</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="min-w-full divide-y divide-gray-200">
+                                        <tbody class="bg-white divide-y divide-gray-200">
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">UI</td>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">React + Vite (deployed to S3 + CloudFront)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">API</td>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">AWS API Gateway + Lambda</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">AI</td>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Amazon Bedrock (via Claude or Titan)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Auth (optional)</td>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Cognito</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Storage (optional)</td>
+                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">DynamoDB</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-600">
+                                You can check out the project repo and diagram 👉 <a href="#" class="font-medium">here</a> (includes source code, README, and deployment instructions)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Section -->
+            <section class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                        <i class="fas fa-book text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">📚 Study Resources (Everything I Used)</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="resource-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition duration-300 ease-in-out">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">AWS Official Learning Guide</h3>
+                                <p class="text-gray-500 text-sm mb-2">Docs</p>
+                                <a href="#" class="text-indigo-600 text-sm font-medium">PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition duration-300 ease-in-out">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">AWS Skill Builder</h3>
+                                <p class="text-gray-500 text-sm mb-2">Free modules</p>
+                                <a href="#" class="text-indigo-600 text-sm font-medium">Website</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition duration-300 ease-in-out">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Pluralsight Path</h3>
+                                <p class="text-gray-500 text-sm mb-2">Video Course</p>
+                                <a href="#" class="text-indigo-600 text-sm font-medium">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition duration-300 ease-in-out">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Udemy Practice Tests</h3>
+                                <p class="text-gray-500 text-sm mb-2">Questions (260 total)</p>
+                                <a href="#" class="text-indigo-600 text-sm font-medium">Course</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card bg-white p-6 rounded-lg shadow-sm border border-gray-100 transition duration-300 ease-in-out">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 mr-4">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">ChatGPT</h3>
+                                <p class="text-gray-500 text-sm mb-2">Study partner</p>
+                                <p class="text-gray-600 text-sm">Used for explanations & revision</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final Thoughts -->
+            <section class="mb-16 bg-indigo-50 rounded-xl p-8">
+                <div class="flex items-center mb-6">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                        <i class="fas fa-hands-helping text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold">🙌 Final Thoughts</h2>
+                </div>
+                <p class="text-gray-600 mb-6">
+                    If you're on this journey:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>Start with the concepts (Pluralsight + AWS docs)</li>
+                    <li>Move to active recall (Udemy questions + flashcards)</li>
+                    <li>Apply what you learn — build something with Bedrock or SageMaker</li>
+                </ul>
+                <p class="text-gray-600 mb-6">
+                    Passing this cert showed me that failure isn't a dead end — it's just a redirection.
+                </p>
+                <p class="text-gray-600">
+                    If you're studying, building, or pivoting toward AI, reach out — happy to collaborate or answer questions.
+                </p>
+            </section>
+
+            <!-- Social Links -->
+            <div class="flex flex-wrap gap-4 mb-16">
+                <a href="#" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+                    <i class="fab fa-linkedin mr-2"></i> Follow me on LinkedIn
+                </a>
+                <a href="#" class="inline-flex items-center px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition">
+                    <i class="fab fa-github mr-2"></i> Project GitHub
+                </a>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">#AWS</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">#AIPractitioner</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">#MachineLearning</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">#LLM</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">#PromptEngineering</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">#GenerativeAI</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">#CareerGrowth</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">#StudyTips</span>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-50 border-t border-gray-200 py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-gray-500 mb-4">
+                        © 2023 Jane Doe. All rights reserved.
+                    </p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-indigo-600">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-600">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-600">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-indigo-600">
+                            <i class="fab fa-medium text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
