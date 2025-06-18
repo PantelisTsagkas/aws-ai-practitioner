@@ -294,71 +294,71 @@
             </section>
 
             <!-- Bonus Project Section -->
-            <section class="mb-16">
-                <div class="flex items-center mb-6">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mr-4">
-                        <i class="fas fa-gift text-xl"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold">🧠 Bonus: Building a Certified AWS AI App</h2>
+<section class="mb-16">
+    <div class="flex items-center mb-6">
+        <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+            <i class="fas fa-gift text-xl"></i>
+        </div>
+        <h2 class="text-3xl font-bold">🧠 Bonus: Building a Sentiment Analysis App</h2>
+    </div>
+    <p class="text-gray-600 mb-6">
+        Immediately after passing, I started building a real-world sentiment analysis project using the skills and tools I mastered during AWS AI certification:
+    </p>
+
+    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+        <div class="md:flex">
+            <div class="md:shrink-0 p-6 flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-50">
+                <div class="floating">
+                    <i class="fas fa-brain text-6xl text-indigo-500"></i>
                 </div>
-                <p class="text-gray-600 mb-6">
-                    Immediately after passing, I started building a real project using what I learned:
+            </div>
+            <div class="p-8">
+                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Project</div>
+                <h3 class="text-2xl font-bold mt-1 mb-4">SentiMind – Sentiment Analysis App</h3>
+                <p class="text-gray-600 mb-4">
+                    A serverless full stack AI-powered web application that analyzes and classifies the emotional tone of user-provided text data (e.g. customer feedback).
                 </p>
-                
-                <div class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
-                    <div class="md:flex">
-                        <div class="md:shrink-0 p-6 flex items-center justify-center bg-gradient-to-br from-indigo-50 to-blue-50">
-                            <div class="floating">
-                                <i class="fas fa-robot text-6xl text-indigo-500"></i>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Project</div>
-                            <h3 class="text-2xl font-bold mt-1 mb-4">AskBetter – Prompt Enhancer App</h3>
-                            <p class="text-gray-600 mb-4">
-                                A web app that:
-                            </p>
-                            <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
-                                <li>Accepts user prompts</li>
-                                <li>Sends them to Amazon Bedrock (Claude 3)</li>
-                                <li>Returns optimized, improved prompt variations</li>
-                            </ul>
-                            
-                            <div class="mb-6">
-                                <h4 class="font-bold text-gray-800 mb-2">🧱 Stack:</h4>
-                                <div class="overflow-x-auto">
-                                    <table class="min-w-full divide-y divide-gray-200">
-                                        <tbody class="bg-white divide-y divide-gray-200">
-                                            <tr>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">UI</td>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">React + Vite (deployed to S3 + CloudFront)</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">API</td>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">AWS API Gateway + Lambda</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">AI</td>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Amazon Bedrock (via Claude or Titan)</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Auth </td>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Cognito</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Storage </td>
-                                                <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">DynamoDB</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                           
-                        </div>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>Accepts single or multiple text inputs (e.g. user reviews or emails)</li>
+                    <li>Uses Amazon Bedrock to infer sentiment (positive, negative, neutral)</li>
+                    <li>Returns classifications with confidence scores and explanation</li>
+                </ul>
+
+                <div class="mb-6">
+                    <h4 class="font-bold text-gray-800 mb-2">🧱 Stack:</h4>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">UI</td>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">React + Vite (deployed to S3 + CloudFront)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">API</td>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">AWS API Gateway + Lambda</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">AI</td>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Amazon Bedrock (Titan Text Embeddings + Claude for classification)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Auth</td>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">Amazon Cognito</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Storage</td>
+                                    <td class="px-4 py-2 whitespace-nowrap text-sm text-gray-500">DynamoDB (to store classified results)</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 
             <!-- Resources Section -->
             <section class="mb-16">
